@@ -16,7 +16,16 @@ export default class ProductController {
     const createdRecord = ProductModel.add(newProduct);
     res.status(200).send(createdRecord);
   }
-  getOneProduct(req, res) {}
+  getOneProduct(req, res) {
+    const { id } = req.params;
+    console.log(id);
+    const product = ProductModel.getProductById(id);
+    if (!product) {
+      res.status(404).send("Product Not Found");
+    } else {
+      res.status(200).send(product);
+    }
+  }
   rateProduct(req, res) {}
   filterProducts(req, res) {}
 }

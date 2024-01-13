@@ -13,6 +13,12 @@ export default class ProductModel {
     return products;
   }
 
+  static getProductById(id) {
+    const product = products.find((p) => p.ID == id);
+    console.log(product);
+    return product;
+  }
+
   static add(product) {
     product.id = products.length + 1;
     products.push(product);
