@@ -27,5 +27,9 @@ export default class ProductController {
     }
   }
   rateProduct(req, res) {}
-  filterProducts(req, res) {}
+  filterProducts(req, res) {
+    const { minPrice, maxPrice, Category } = req.query;
+    const result = ProductModel.filter(+minPrice, +maxPrice, Category);
+    res.status(200).send(result);
+  }
 }

@@ -24,6 +24,18 @@ export default class ProductModel {
     products.push(product);
     return product;
   }
+
+  static filter(minPrice, maxPrice, Category) {
+    const result = products.filter((product) => {
+      return (
+        (!minPrice || product.price >= minPrice) &&
+        (!maxPrice || product.price <= maxPrice) &&
+        (!Category || product.category == Category)
+      );
+    });
+
+    return result;
+  }
 }
 
 var products = [

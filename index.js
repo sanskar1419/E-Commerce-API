@@ -6,6 +6,6 @@ const app = new express();
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-app.use("/api/product", productRouter);
+app.use("/api/products", productRouter);
 
 export default app;
