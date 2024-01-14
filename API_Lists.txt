@@ -1,6 +1,15 @@
 Product Controller
-1. Get all Product
-2. Add a Product
-3. Rate a Product
-4. Get one Product
-5. Filter Product
+
+1. Get all Product - done
+2. Add a Product - done
+3. Get one Product - done
+4. Filter Product - done
+5. Rate a product
+6. Add a product to a cart
+7. Retrive all the products from cart
+8. Remove a product from cart
+
+User Controller
+
+1. SignUp
+2. SignIn 
