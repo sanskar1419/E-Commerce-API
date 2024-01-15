@@ -26,7 +26,15 @@ export default class ProductController {
       res.status(200).send(product);
     }
   }
-  rateProduct(req, res) {}
+  rateProduct(req, res) {
+    const { userId, productId, rating } = req.query;
+    const error = ProductModel.rateProduct(userId, productId, rating);
+    if (error) {
+      return res.status(400).send(error);
+    } else {
+      return res.status(200).send("Rating has been recorded");
+    }
+  }
   filterProducts(req, res) {
     console.log(req.query);
     const { minPrice, maxPrice, Category } = req.query;
