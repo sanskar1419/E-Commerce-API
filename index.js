@@ -2,6 +2,7 @@ import express from "express";
 import swagger from "swagger-ui-express";
 import cors from "cors";
 
+import loggerMiddleware from "./src/middlewares/logger.middleware.js";
 import productRouter from "./src/features/product/product.routes.js";
 import userRouter from "./src/features/user/user.routes.js";
 import cartRouter from "./src/features/cart/cart.routes.js";
@@ -15,6 +16,7 @@ const app = new express();
 // CORS policy configuration
 app.use(cors());
 app.use(express.json());
+app.use(loggerMiddleware);
 
 // app.use("/api/products", basicAuthorizer, productRouter);
 app.use("/api/products", jwtAuth, productRouter);
