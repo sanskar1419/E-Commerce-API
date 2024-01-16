@@ -19,4 +19,12 @@ app.use("/api/cartItems", jwtAuth, cartRouter);
 app.use("/api/users", userRouter);
 app.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
 
+app.use((req, res) => {
+  res
+    .status(404)
+    .send(
+      "API not found. Please check our documentation for more information at http://127.0.0.1:9000/api-docs/"
+    );
+});
+
 export default app;
