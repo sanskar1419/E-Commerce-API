@@ -3,6 +3,7 @@ import swagger from "swagger-ui-express";
 import cors from "cors";
 
 import loggerMiddleware from "./src/middlewares/logger.middleware.js";
+import { logger } from "./src/middlewares/logger.middleware.js";
 import productRouter from "./src/features/product/product.routes.js";
 import userRouter from "./src/features/user/user.routes.js";
 import cartRouter from "./src/features/cart/cart.routes.js";
@@ -23,6 +24,16 @@ app.use("/api/products", jwtAuth, productRouter);
 app.use("/api/cartItems", jwtAuth, cartRouter);
 app.use("/api/users", userRouter);
 app.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
+
+app.use((err, req, res, next) => {
+  console.log(err);
+  logger.log({
+    level: "error",
+    message: err.stack,
+    Request_URL: req.url,
+  });
+  res.status(503).send("Something went wrong, please try later");
+});
 
 app.use((req, res) => {
   res
