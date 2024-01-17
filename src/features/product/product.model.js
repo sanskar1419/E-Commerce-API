@@ -43,12 +43,12 @@ export default class ProductModel {
     const user = UserModel.getAll().find((u) => u.ID == userId);
 
     if (!user) {
-      return "User Not Found";
+      throw new Error("User Not Found");
     }
 
     const product = products.find((p) => p.ID == productId);
     if (!product) {
-      return "Product Not Found";
+      throw new Error("Product Not Found");
     }
 
     if (!product.ratings) {
