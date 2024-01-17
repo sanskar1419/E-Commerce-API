@@ -11,6 +11,7 @@ import basicAuthorizer from "./src/middlewares/basicAuth1.middleware.js";
 import authorizer from "./src/middlewares/basicAuth2.middleware.js";
 import jwtAuth from "./src/middlewares/jwt.middleware.js";
 import apiDocs from "./swagger.json" assert { type: "json" };
+import { ApplicationError } from "./src/error-handler/applicationError.js";
 
 const app = new express();
 
@@ -27,12 +28,21 @@ app.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
 
 app.use((err, req, res, next) => {
   console.log(err);
+  if (err instanceof ApplicationError) {
+    logger.log({
+      level: "error",
+      message: err.stack,
+      Request_URL: req.url,
+    });
+    return res.status(err.code).send(err.message);
+  }
+
   logger.log({
     level: "error",
     message: err.stack,
     Request_URL: req.url,
   });
-  res.status(503).send("Something went wrong, please try later");
+  res.status(500).send("Something went wrong, please try later");
 });
 
 app.use((req, res) => {

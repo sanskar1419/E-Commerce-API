@@ -1,15 +1,18 @@
 {
   level: 'info',
   Request_Body: '{}',
-  Request_URL: '/api/products/',
+  Request_URL: '/api/products/rate?userId=5&productId=2&rating=5',
+  Request_Query: { userId: '5', productId: '2', rating: '5' },
+  Request_Params: {},
   service: 'Request-Logging',
   label: 'Data is being stored here',
-  timestamp: '2024-01-17T10:00:02.685Z'
+  timestamp: '2024-01-17T12:15:27.877Z'
 }
 {
   level: 'error',
-  message: 'TypeError: ProductModel.GetAlls is not a function\n' +
-    '    at getAllProduct (file:///D:/Node%20Js%20New%20content/E-Commerce-Api/src/features/product/product.controller.js:5:35)\n' +
+  message: 'Error: User Not Found\n' +
+    '    at ProductModel.rateProduct (file:///D:/Node%20Js%20New%20content/E-Commerce-Api/src/features/product/product.model.js:47:13)\n' +
+    '    at rateProduct (file:///D:/Node%20Js%20New%20content/E-Commerce-Api/src/features/product/product.controller.js:32:18)\n' +
     '    at Layer.handle [as handle_request] (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
     '    at next (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
     '    at Route.dispatch (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
@@ -17,10 +20,9 @@
     '    at D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
     '    at Function.process_params (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
     '    at next (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
-    '    at Function.handle (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
-    '    at router (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\index.js:47:12)',
-  Request_URL: '/api/products/',
+    '    at Function.handle (D:\\Node Js New content\\E-Commerce-Api\\node_modules\\express\\lib\\router\\index.js:175:3)',
+  Request_URL: '/api/products/rate?userId=5&productId=2&rating=5',
   service: 'Request-Logging',
   label: 'Data is being stored here',
-  timestamp: '2024-01-17T10:00:02.697Z'
+  timestamp: '2024-01-17T12:15:27.891Z'
 }

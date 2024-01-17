@@ -28,11 +28,8 @@ export default class ProductController {
   }
   rateProduct(req, res) {
     const { userId, productId, rating } = req.query;
-    try {
-      ProductModel.rateProduct(userId, productId, rating);
-    } catch (error) {
-      return res.status(400).send(error.message);
-    }
+
+    ProductModel.rateProduct(userId, productId, rating);
     return res.status(200).send("Rating has been recorded");
   }
   filterProducts(req, res) {

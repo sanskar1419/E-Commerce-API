@@ -27,6 +27,8 @@ const loggerMiddleware = async (req, res, next) => {
       level: "info",
       Request_Body: logData,
       Request_URL: req.url,
+      Request_Query: req.query,
+      Request_Params: req.params,
     });
   }
   next();
