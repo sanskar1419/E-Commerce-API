@@ -26,3 +26,63 @@
   label: 'Data is being stored here',
   timestamp: '2024-01-17T12:15:27.891Z'
 }
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller User","email":"seller@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T11:49:12.765Z'
+}
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller User","email":"seller@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T11:50:54.056Z'
+}
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller User","email":"seller@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T11:56:34.835Z'
+}
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller User","email":"seller@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T12:00:21.049Z'
+}
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller User","email":"seller@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T12:01:23.373Z'
+}
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller User","email":"seller@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T12:06:32.525Z'
+}

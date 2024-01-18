@@ -1,5 +1,5 @@
 import app from "./index.js";
-import connectToMongoDB from "./src/config/mongodb.js";
+import { connectToMongoDB } from "./src/config/mongodb.js";
 
 const port = 9000;
 
