@@ -86,3 +86,23 @@
   label: 'Data is being stored here',
   timestamp: '2024-01-18T12:06:32.525Z'
 }
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller2 User","email":"seller2@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T16:52:38.214Z'
+}
+{
+  level: 'info',
+  Request_Body: '{"name":"Seller2 User","email":"seller2@gmail.com","password":"Seller123@","type":"seller"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-18T16:53:20.709Z'
+}
