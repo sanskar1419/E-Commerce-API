@@ -14,11 +14,11 @@ class UserRepository {
     }
   }
 
-  async signIn(email, password) {
+  async findByEmail(email) {
     try {
       const database = getDatabase();
       const collection = database.collection("users");
-      return await collection.findOne({ email, password });
+      return await collection.findOne({ email });
     } catch (error) {
       console.log(error);
       throw new ApplicationError("Something went wrong", 500);

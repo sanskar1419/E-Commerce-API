@@ -106,3 +106,13 @@
   label: 'Data is being stored here',
   timestamp: '2024-01-18T16:53:20.709Z'
 }
+{
+  level: 'info',
+  Request_Body: '{"name":"Customer","email":"customer@gmail.com","password":"Customer123@","type":"customer"}',
+  Request_URL: '/api/users/sign-up',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T05:03:13.366Z'
+}

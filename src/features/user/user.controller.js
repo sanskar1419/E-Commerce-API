@@ -2,6 +2,7 @@ import { ApplicationError } from "../../error-handler/applicationError.js";
 import UserModel from "./user.model.js";
 import jwt from "jsonwebtoken";
 import UserRepository from "./user.repository.js";
+import bcrypt from "bcrypt";
 
 export default class UserController {
   constructor() {
@@ -10,7 +11,8 @@ export default class UserController {
   async signUp(req, res) {
     try {
       const { name, email, password, type } = req.body;
-      const newUser = new UserModel(name, email, password, type);
+      const hashPassword = await bcrypt.hash(password, 12);
+      const newUser = new UserModel(name, email, hashPassword, type);
       await this.userRepository.signUp(newUser);
       res.status(201).send(newUser);
     } catch (error) {
@@ -20,23 +22,28 @@ export default class UserController {
   async signIn(req, res) {
     try {
       const { email, password } = req.body;
-      const user = await this.userRepository.signIn(email, password);
+      const user = await this.userRepository.findByEmail(email);
       if (!user) {
-        res.status(400).send("Invailid Credentials");
+        return res.status(400).send("Invailid Credentials");
       } else {
-        const token = jwt.sign(
-          {
-            userId: user.ID,
-            email: user.email,
-          },
-          "gH8gK1MHLfh4VPwK2zt0HvnIYYzX8hnU",
-          {
-            expiresIn: "1h",
-          }
-        );
-        res.status(200).send(token);
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (passwordMatch) {
+          const token = jwt.sign(
+            {
+              userId: user.ID,
+              email: user.email,
+            },
+            "gH8gK1MHLfh4VPwK2zt0HvnIYYzX8hnU",
+            {
+              expiresIn: "1h",
+            }
+          );
+          res.status(200).send(token);
+        } else {
+          return res.status(400).send("Invailid Credentials");
+        }
       }
-    } catch (error) {
+    } catch (err) {
       console.log(err);
       throw new ApplicationError("Something went wrong", 500);
     }
