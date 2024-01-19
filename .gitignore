@@ -2,3 +2,4 @@ node_modules/
 logs.txt
 error.log
 log.txt
+.env
