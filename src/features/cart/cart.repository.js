@@ -11,7 +11,15 @@ class CartRepository {
     try {
       const database = getDatabase();
       const collection = database.collection(this.db_collection);
-      await collection.insertOne(newItem);
+      await collection.updateOne(
+        { productID: newItem.productID, userID: newItem.userID },
+        {
+          $inc: {
+            quantity: newItem.quantity,
+          },
+        },
+        { upsert: true }
+      );
     } catch (error) {
       console.log(error);
       throw new ApplicationError(
