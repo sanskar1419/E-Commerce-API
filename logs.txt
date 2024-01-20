@@ -116,3 +116,257 @@
   label: 'Data is being stored here',
   timestamp: '2024-01-19T05:03:13.366Z'
 }
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T06:52:27.165Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T06:54:20.073Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T06:58:42.413Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T06:59:43.183Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:10:46.028Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:12:12.209Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:15:00.085Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:20:54.232Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:21:53.085Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:23:45.244Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:45:41.939Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:46:47.109Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T07:48:30.562Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:13:09.969Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:15:19.266Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:18:02.295Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:39:56.905Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:40:37.949Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:42:00.433Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:47:02.521Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/65aa20cc7ebdb9754e64ecc0',
+  Request_Query: {},
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-19T08:53:45.076Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/product/filter?maxPrice=300&minPrice=100&Category=Category%201',
+  Request_Query: { maxPrice: '300', minPrice: '100', Category: 'Category 1' },
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-20T04:25:26.912Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/product/filter?maxPrice=300&minPrice=100',
+  Request_Query: { maxPrice: '300', minPrice: '100' },
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-20T04:26:07.390Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/product/filter?maxPrice=300&minPrice=100',
+  Request_Query: { maxPrice: '300', minPrice: '100' },
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-20T04:30:33.729Z'
+}
+{
+  level: 'info',
+  Request_Body: '{}',
+  Request_URL: '/api/products/rate?userId=65aa029160910eb550572559&productId=65aa217487b879ad882d962f&rating=5',
+  Request_Query: {
+    userId: '65aa029160910eb550572559',
+    productId: '65aa217487b879ad882d962f',
+    rating: '5'
+  },
+  Request_Params: {},
+  service: 'Request-Logging',
+  label: 'Data is being stored here',
+  timestamp: '2024-01-20T05:22:42.263Z'
+}

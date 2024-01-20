@@ -30,7 +30,7 @@ export default class UserController {
         if (passwordMatch) {
           const token = jwt.sign(
             {
-              userId: user.ID,
+              userId: user._id,
               email: user.email,
             },
             process.env.JWT_SECRET_KEY,
