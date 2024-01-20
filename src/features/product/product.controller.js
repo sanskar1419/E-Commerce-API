@@ -51,7 +51,7 @@ export default class ProductController {
   }
   async rateProduct(req, res, next) {
     try {
-      const { productId, rating } = req.query;
+      const { productId, rating } = req.body;
       const userId = req.userId;
       await this.productRepository.rate(userId, productId, rating);
       return res.status(200).send("Rating has been recorded");

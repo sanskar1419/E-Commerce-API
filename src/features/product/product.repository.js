@@ -70,11 +70,22 @@ class ProductRepository {
     try {
       const database = getDatabase();
       const collection = database.collection(this.db_collection);
-      collection.updateOne(
+      //  Remove existing Entry
+      await collection.updateOne(
+        {
+          _id: new ObjectId(productId),
+        },
+        {
+          $pull: {
+            ratings: { userId: new ObjectId(userId) },
+          },
+        }
+      );
+      await collection.updateOne(
         { _id: new ObjectId(productId) },
         {
           $push: {
-            rating: {
+            ratings: {
               userId: new ObjectId(userId),
               rating,
             },
@@ -86,6 +97,39 @@ class ProductRepository {
       throw new ApplicationError("Something went wrong", 500);
     }
   }
+  /*
+  async rate(userID, productID, rating){
+      try{
+          const db = getDB();
+          const collection = db.collection(this.collection);
+          // 1. Find the product
+          const product = await collection.findOne({_id:new ObjectId(productID)})
+          // 2. Find the rating
+
+          const userRating = await product?.ratings?.find(r=>r.userID==userID);
+          if(userRating){
+          // 3. Update the rating
+          await collection.updateOne({
+              _id: new ObjectId(productID), "ratings.userID": new ObjectId(userID)
+          },{
+              $set:{
+                  "ratings.$.rating":rating
+              }
+          }
+          );
+          }else{
+              await collection.updateOne({
+                  _id:new ObjectId(productID)
+              },{
+                  $push: {ratings: {userID:new ObjectId(userID), rating}}
+              })
+          }
+      }catch(err){
+          console.log(err);
+          throw new ApplicationError("Something went wrong with database", 500);
+      }
+  }
+  */
 }
 
 export default ProductRepository;
