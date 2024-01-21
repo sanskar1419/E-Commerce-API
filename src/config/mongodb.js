@@ -30,6 +30,7 @@ const createCounter = async (db) => {
 const createIndexes = async (db) => {
   try {
     await db.collection("products").createIndex({ price: 1 });
+    await db.collection("products").createIndex({ name: 1, category: -1 });
     console.log("Indexes are Created");
   } catch (error) {
     console.log(error);
