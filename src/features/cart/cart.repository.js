@@ -11,9 +11,11 @@ class CartRepository {
     try {
       const database = getDatabase();
       const collection = database.collection(this.db_collection);
+      const id = await this.getNextCounter(database);
       await collection.updateOne(
         { productID: newItem.productID, userID: newItem.userID },
         {
+          $setOnInsert: { _id: id },
           $inc: {
             quantity: newItem.quantity,
           },
@@ -54,6 +56,27 @@ class CartRepository {
         _id: new ObjectId(cartItemID),
       });
       return result.deletedCount > 0;
+    } catch (error) {
+      console.log(error);
+      throw new ApplicationError(
+        "Something went wrong With the data base",
+        500
+      );
+    }
+  }
+
+  async getNextCounter(db) {
+    try {
+      const resultDocument = await db
+        .collection("counters")
+        .findOneAndUpdate(
+          { _id: "cartItemId" },
+          { $inc: { value: 1 } },
+          { returnDocument: "after" }
+        );
+      console.log(resultDocument);
+      console.log(resultDocument.value);
+      return resultDocument.value;
     } catch (error) {
       console.log(error);
       throw new ApplicationError(
